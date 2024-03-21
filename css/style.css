@@ -1,0 +1,145 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px;
+    color: red
+}
+
+.child {
+    background-color: #323234;
+}
+
+.first {
+    grid-area: 1 / 2/ span 1/ span 3
+}
+
+.second {
+    grid-area: 1/ 1/ span 7/ span 1
+}
+
+.third {
+    grid-area: 4/ 2/ span 1/ span 3
+}
+
+.fourth {
+    grid-area: 7/ 2/ span 1/ span 3
+}
+
+.fifth {
+    grid-area: 1/ 6/ span 7/ span 1
+}
+
+.sixth {
+    grid-area: 7/ 6/ span 1/ span 4
+}
+
+.ball {
+    width: 30px;
+    height: 30px;
+    background-color: #fea604;
+    grid-area: 7/ 9/span 1/ span 1;
+    margin: auto;
+    animation-name: ball-one;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.two {
+    width: 30px;
+    height: 30px;
+    background-color: #fea604;
+    margin: auto;
+    grid-area: 1/ 4/ span 1/ span 1;
+    animation-name: ball-two;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate
+}
+
+@keyframes ball-one {
+    10% {
+        transform: translate(-133px);
+    }
+
+    20% {
+        transform: translate(-133px, -266px);
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+        transform: translate(-133px, -266px);
+    }
+
+    31% {
+        opacity: 0;
+        transform: translate(0);
+    }
+
+    32% {
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes ball-two {
+
+    5% {
+        transform: translateX(-133px);
+    }
+
+    10% {
+        transform: translate(-133px, 133px);
+    }
+
+    15% {
+        transform: translate(0, 133px);
+    }
+
+    20% {
+        transform: translate(-133px, 133px);
+    }
+
+    25% {
+        transform: translate(-133px, 266px)
+    }
+
+    30% {
+        transform: translate(0, 266px);
+    }
+
+    35% {
+        transform: translate(-133px, 266px);
+    }
+
+    40% {
+        transform: translate(-133px, 133px)
+    }
+
+    45% {
+        transform: translate(0, 133px);
+    }
+
+    50% {
+        transform: translate(-133px, 133px);
+    }
+
+    55% {
+        transform: translateX(-133px);
+    }
+
+    60% {
+        transform: translate(0);
+    }
+
+}
